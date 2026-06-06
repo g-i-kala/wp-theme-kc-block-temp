@@ -1,0 +1,28 @@
+/* Text Button */
+/* This is a little more complex as it allows you to also use the "icon button" classes built into this theme - Tutorial here: XXXX  */
+/* The colors are just for demo - it's advised that once you have set up your custom colors, you use the variable instead of the hardcoded hex value */
+
+.is-style-text-btn .wp-block-button__link {
+  color: inherit;
+  background: transparent !important;
+  border: none !important;
+}
+
+.is-style-text-btn .wp-block-button__link {
+  border-bottom: 1px solid #444 !important;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+}
+
+.is-style-text-btn .wp-block-button__link:hover {
+  border-color: transparent !important;
+}
+
+/* This to use the Button Icon classes */
+.is-style-text-btn[class^="ic-btn-"] .wp-block-button__link::after,
+.is-style-text-btn[class*=" ic-btn-"] .wp-block-button__link::after {
+  padding-left: 2px;
+}

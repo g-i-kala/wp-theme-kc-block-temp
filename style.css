@@ -1,0 +1,132 @@
+/*
+Theme Name: kc-bt-temp
+Theme URI: https://github.com/karo-ej
+Author: karo_ej
+Author URI: https://github.com/karo-ej
+Description: A custom block theme built from Starter Block Theme v4 by Jakson (https://jakson.co/). A blank canvas starter theme for building WordPress Block Themes using the Full Site Editor.
+Requires at least: 6.8
+Tested up to: 6.8
+Requires PHP: 7.4
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kc-bt-temp
+Tags: Block editor patterns, Block editor styles, Block themes, Template editing
+
+/*  Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/*  Reduced motion prefs  */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/*  Navigation Block Breakpoint. Credit: https://wpdocs.io/ */
+body .wp-block-navigation__responsive-container-open:not(.always-shown) {
+  display: block !important;
+}
+
+body
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(
+    .is-menu-open
+  ) {
+  display: none !important;
+}
+
+/* Change the width to the breakpoint of the Nav */
+@media (min-width: 782px) {
+  body .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: none !important;
+  }
+
+  body
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(
+      .is-menu-open
+    ) {
+    display: block !important;
+  }
+}
+
+/* end nav break point */
+
+/* Nicely wrapped headlines */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* I've no idea why when you add a background color to a column, WP by default adds padding to it... so weird - this get's rid of that */
+:where(.wp-block-columns.has-background) {
+  padding: initial;
+}
+
+/* Pull Quote */
+.wp-block-pullquote blockquote {
+  display: grid;
+  gap: 20px;
+}
+
+.wp-block-pullquote cite {
+  font-size: 80%;
+  font-weight: 600;
+}
+
+/* Search Block */
+.wp-block-search__input {
+  border: 1px solid;
+}
+
+.wp-block-search__button {
+  box-shadow: none;
+  border: 1px solid var(--wp--preset--color--custom-off-black);
+  border-radius: 0;
+  color: white;
+  padding: 0.4rem 1rem 0.5rem 1rem;
+  font-weight: 500;
+}
+
+/* Comments */
+.comment-form-cookies-consent {
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Keeps our titles link as the off black color in things like the query loop*/
+.wp-block-post-title :where(a) {
+  color: var(--wp--preset--color--custom-off-black);
+}
+
+/* Button hover state  - core button block still does not have this and it can't be done in theme.json! */
+
+.wp-block-button__link,
+a {
+  transition: 0.3s;
+}
+
+.wp-block-button.is-style-fill .wp-block-button__link:hover,
+#commentform .form-submit.wp-block-button input:hover {
+  background: var(--wp--preset--color--custom-white);
+  color: var(--wp--preset--color--custom-off-black);
+}
+
+.wp-block-button .wp-block-button__link:hover {
+  background: var(--wp--preset--color--custom-custom-white);
+  color: var(--wp--preset--color--off-black);
+  border-color: var(--wp--preset--color--custom-off-black);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+  background: var(--wp--preset--color--custom-off-black);
+  color: var(--wp--preset--color--custom-white);
+  border-color: var(--wp--preset--color--custom-off-black);
+}
+
+a:hover:not(.wp-block-site-title a, .wp-block-button__link.wp-element-button) {
+  text-decoration: underline !important;
+}

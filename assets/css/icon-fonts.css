@@ -1,0 +1,74 @@
+/* This custom CSS is a cheeky way to get some lightweight icons on to your buttons (and inline) using classes - tutorial here: https://jakson.co/button-font-icons-tutorial
+Best used with https://wordpress.org/plugins/css-class-manager/ 
+*/
+
+/* --- Icon Buttons --- */
+[class^="ic-btn-"] .wp-block-button__link::after,
+[class*=" ic-btn-"] .wp-block-button__link::after {
+  font-family: "Icon-Font" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f178";
+  padding-left: 0.7rem;
+  font-size: 1.9rem;
+  width: 24px;
+}
+
+[class^="ic-btn-"] .wp-block-button__link,
+[class*=" ic-btn-"] .wp-block-button__link {
+  display: inline-flex !important;
+  align-items: center !important;
+  vertical-align: bottom !important;
+}
+
+.ic-btn-arrow-right .wp-block-button__link::after {
+  content: "\e902" !important;
+}
+
+.ic-btn-chevron-right .wp-block-button__link::after {
+  content: "\e903" !important;
+  padding-left: 0.3rem;
+  width: 18px;
+}
+
+.ic-btn-download .wp-block-button__link::after {
+  content: "\e901" !important;
+}
+
+.ic-btn-external-link .wp-block-button__link::after {
+  content: "\e900" !important;
+}
+
+/* --- Icons Inlne --- */
+[class^="ic-inline-"]::after,
+[class*="ic-inline-"]::after {
+  font-family: "Icon-Font" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e900";
+  padding-left: 0.1rem;
+  font-size: larger;
+  width: 27px;
+}
+
+[class^="ic-inline-"],
+[class*="ic-inline-"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  vertical-align: bottom !important;
+  /* border-bottom: 1px solid; */
+}
+
+.ic-inline-external-link::after {
+  content: "\e900" !important;
+}

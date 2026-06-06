@@ -1,0 +1,39 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"is-style-starter-group","layout":{"type":"constrained"}} -->
+<main class="wp-block-group is-style-starter-group"><!-- wp:query-title {"type":"archive","align":"wide"} /-->
+
+<!-- wp:query {"queryId":24,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","className":""} -->
+<div class="wp-block-query alignwide"><!-- wp:post-template {"className":"","style":{"spacing":{"blockGap":"2.2rem"}},"layout":{"type":"grid","columnCount":3}} -->
+<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","className":""} /-->
+
+<!-- wp:group {"className":"","style":{"spacing":{"blockGap":"5px","padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small)"><!-- wp:post-date {"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}},"className":"","fontSize":"xsmall"} /-->
+
+<!-- wp:post-terms {"term":"category","fontSize":"xsmall"} /-->
+
+<!-- wp:post-title {"isLink":true,"className":"","fontSize":"medium"} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"paginationArrow":"arrow","showLabel":false,"className":"","layout":{"type":"flex","justifyContent":"center"}} -->
+<!-- wp:query-pagination-previous {"className":"","fontSize":"small"} /-->
+
+<!-- wp:query-pagination-numbers {"className":"","fontSize":"small"} /-->
+
+<!-- wp:query-pagination-next {"className":"","fontSize":"small"} /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:group {"className":"","layout":{"type":"constrained","contentSize":""}} -->
+<div class="wp-block-group"><!-- wp:query-no-results {"className":""} -->
+<!-- wp:heading {"textAlign":"center","level":4,"className":"","fontSize":"medium"} -->
+<h4 class="wp-block-heading has-text-align-center has-medium-font-size">Ah heck, we can't find any content for this page :(</h4>
+<!-- /wp:heading -->
+
+<!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search","className":""} /-->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:group --></div>
+<!-- /wp:query --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->

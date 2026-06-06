@@ -1,0 +1,13 @@
+/* Blue Button */
+/* The colors are just for demo - it's advised that once you have set up your custom colors, you use the variable instead of the hardcoded hex value */
+
+.is-style-blue-btn .wp-block-button__link {
+  color: white;
+  background: #3db7dc !important;
+  border: 2px solid #3db7dc !important;
+}
+
+.is-style-blue-btn .wp-block-button__link:hover {
+  color: #3db7dc !important;
+  background: white !important;
+}
